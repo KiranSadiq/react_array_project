@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <p id="showdata"></p>
+
+
+<script>
+
+/*
+//Map syntax 
+// array.map(function(currentValue, index, arr), thisValue)  
+
+const subjects= ['chemistry', 'physics', 'Maths', 'urdu', 'data structure'];
+ 
+//document.write(subjects[2]);
+
+const newarr = subjects.map(function(cvalue){
+
+    return cvalue;
+
+    
+});
+console.log(newarr);
+
+
+*/
+
+
+/*
+const subjects =['Maths','chemistry','datastructure','Urdu'];
+   const newarr = subjects.map(function(cvalue,i){
+      return i + ":" + cvalue + "course";
+   });
+   console.log(newarr);
+
+*/
+/////////////////////////////////
+
+
+
+const studentdata =[
+    {id:1, name:'kiran', degree:'MCS'},
+    {id:2, name:'warda',degree:'BCS'},
+    {id:3, name:'aiza',degree:'MA'},
+    {id:4, name:'sana',degree:'M.phil'},
+    
+];
+//console.log(studentdata[2].name); //simple js(ek line sy ek line ka output ata hay)
+
+const newarray = studentdata.map((cvalue)=>{
+    return `My name is ${cvalue.name}.My highest degree is in ${cvalue.degree}`;
+});
+console.log(newarray);
+
+
+
+
+//this line is just for html code
+document.getElementById('showdata').innerHTML=newarray;
+
+</script>
+
+</body>
+</html>
